@@ -23,21 +23,21 @@ def handle_events():
 
 def create_world():
     global running
-    global grass
+    global grass, grass2
     global team
     global boy
 
     running = True
 
+
+    grass = Grass(400, 30)
+    game_world.add_object(grass, 0)
+
     boy = Boy()
     game_world.add_object(boy, 1)
 
-    grass = Grass()
-    game_world.add_object(grass, 0)
-
-
-
-
+    grass2 = Grass(400, 20)
+    game_world.add_object(grass2, 1)
 
 def update_world():
     game_world.update()
